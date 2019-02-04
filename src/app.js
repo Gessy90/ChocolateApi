@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import ChocolateNew from './components/ChocolateNew'
-import ChocolateIndex from './components/ChocolateIndex'
+import ChocolatesNew from './components/ChocolatesNew'
+import ChocolatesIndex from './components/ChocolatesIndex'
 import axios from 'axios'
 
 import 'bulma'
@@ -19,7 +19,7 @@ class App extends React.Component {
   }
   handleSubmit(e) {
     e.preventDefault()
-    axios.post('/api/chocolate', this.state)
+    axios.post('/api/chocolate', this.state.data)
       .then(res => console.log(res))
   }
 
@@ -34,8 +34,8 @@ class App extends React.Component {
       <BrowserRouter>
         <main>
           <Switch>
-            <Route path="/chocolates/new" component={ChocolateNew} />
-            <Route path="/chocolates" component={ChocolateIndex} />
+            <Route path="/chocolates/new" component={ChocolatesNew} />
+            <Route path="/chocolates" component={ChocolatesIndex} />
           </Switch>
         </main>
 

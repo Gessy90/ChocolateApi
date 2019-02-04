@@ -4,7 +4,7 @@ import axios from 'axios'
 
 import Form from './Form'
 
-class ChocolateNew extends React.Component{
+class ChocolatesNew extends React.Component{
   constructor(){
     super()
 
@@ -34,6 +34,7 @@ class ChocolateNew extends React.Component{
   }
   render(){
     return(
+      
       <main className="section">
         <div className="container">
           <Form
@@ -46,4 +47,4 @@ class ChocolateNew extends React.Component{
     )
   }
 }
-export default ChocolateNew
+export default ChocolatesNew
