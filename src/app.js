@@ -28,8 +28,6 @@ class App extends React.Component {
     this.setState({ [name]: value })
   }
 
-
-
   render() {
     if(!this.state.chocolate) return null
     return (
