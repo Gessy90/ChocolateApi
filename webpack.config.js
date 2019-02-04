@@ -6,7 +6,8 @@ module.exports = {
   entry: './src/app.js',
   output: {
     path: path.resolve('dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    publicPath: '/'
   },
   module: {
     rules: [
@@ -25,8 +26,9 @@ module.exports = {
     open: true,
     port: 8000,
     watchContentBase: true,
+    historyApiFallback: true,
     proxy: {
-      '/api/chocolate': {
+      '/api': {
         target: 'http://localhost:4000',
         secure: false
       }
